@@ -33,7 +33,7 @@ class NotificationsTest(BitcoinTestFramework):
         self.setup_clean_chain = True
 
     def setup_network(self):
-        self.wallet = ''.join(chr(i) for i in range(FILE_CHAR_START, FILE_CHAR_END) if chr(i) not in FILE_CHAR_BLOCKLIST)
+        self.wallet = ''.join(chr(i) for i in range(FILE_CHAR_START, FILE_CHAR_END) if chr(i) not in FILE_CHAR_BLACKLIST)
         self.alertnotify_dir = os.path.join(self.options.tmpdir, "alertnotify")
         self.blocknotify_dir = os.path.join(self.options.tmpdir, "blocknotify")
         self.walletnotify_dir = os.path.join(self.options.tmpdir, "walletnotify")
